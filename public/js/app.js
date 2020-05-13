@@ -1,5 +1,3 @@
-console.log("Cline is loaded!!")
-
 const selectForm = document.querySelector('form') // select form 
 const input = document.querySelector('input') // select input
 const messageOne = document.querySelector('#Message1') // select message <p>
