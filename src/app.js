@@ -59,15 +59,16 @@ app.get('/weather', (req,res) => {
                     error:error
                 })
             }
-            temp(latitute,longitute,(error,{temperature} = {}) => {
+            temp(latitute,longitute,(error,{temperature, weather_descriptions} = {}) => {
                 if (error) {
                     return res.send({
                         error:error
                     })
                 }
                 res.send({
-                    forcast:temperature,
-                    location, //ใช้แบบนี้ได้เพราะตัวแปรตัวเดียวกัน 
+                    temperature,
+                    weather_descriptions,
+                    location,
                     address 
                 })
 

@@ -10,7 +10,8 @@ const temp = (lat, lng, callback) => {
             callback('Unable to find',undefined)
         } else {
             callback(undefined,{
-                temperature: "It is currently " + response.body.current.temperature + " degrees out."
+                temperature: "It is currently " + response.body.current.temperature + " degrees out.",
+                weather_descriptions: response.body.current.weather_descriptions
             })
         }
     })
