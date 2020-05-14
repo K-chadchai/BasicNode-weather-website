@@ -25,24 +25,24 @@ hbs.registerPartials(hbsPath) //กำหนดพาร์ทที่ต้อ
 app.use(express.static(pathDirec)) //run on file in public folder (if you url : index.html => run index.html) (if you input : about.html => run about.html)
 
 // 
-app.get('', (req,res) => { //root website
+app.get('/', (req,res) => { //root website
     res.render('index' , {
         title:'Weather',
-        name:'Emma'
+        name:'Chadchai'
     })
 })
 
 app.get('/about', (req,res) => {
     res.render('about', {
         title:'About Me',
-        name:'Emma'
+        name:'Chadchai'
     })
 })
 
 app.get('/help', (req,res)=> {
     res.render('help', {
         title:'Help',
-        name:'Emma'
+        name:'Chadchai'
     })
 })
 
@@ -93,6 +93,6 @@ app.get('*', (req,res) => { // ใส่อะไรก็ตามที่ไ�
     })
 }) 
 
-app.listen('3000' , () => {
-    console.log('server is up on port : 3000')
+app.listen(port , () => {
+    console.log('server is up on port : '+ port)
 })
