@@ -8,6 +8,7 @@ console.log(__dirname) // dirname คือ โฟล์เดอร์ปัจ
 // console.log(path.join(__dirname, '../public')) //.. เพื่อถอยไปหลังโฟล์เดอร์ก่อนหน้า
 
 const app = express()
+const port = process.env.PORT || 3000 //set port 
 
 // define paths for express config
 const pathDirec = path.join(__dirname, '../public') // ถอยแล้วไปpublic forder
