@@ -14,7 +14,7 @@ selectForm.addEventListener('submit',(e) => {
 
     messageOne.textContent = 'Loading ...'
 
-    fetch('/weather?address='+location).then((response) => {
+    fetch('/weather?address='+ location).then((response) => {
     response.json({json:true}).then((data)=>{
 
         const {forcast, location, error} = data 
